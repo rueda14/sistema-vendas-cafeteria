@@ -87,23 +87,23 @@ CREATE TABLE tb_funcionarios (
 );
 ```
 ### Tabela de Administrador
-
+```sql
 CREATE TABLE tb_admin (
     id SERIAL PRIMARY KEY,
     nome VARCHAR(120) NOT NULL,
     email VARCHAR(100) NOT NULL,
     senha VARCHAR(32) NOT NULL
 );
-
+```
 ### Tabela de Categoria
-
+```sql
 CREATE TABLE tb_categorias (
     id SERIAL PRIMARY KEY,
     nome VARCHAR(50) NOT NULL
 );
-
+```
 ### Tabela de Produtos
-
+```sql
 CREATE TABLE tb_produtos (
     id SERIAL PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,
@@ -112,9 +112,9 @@ CREATE TABLE tb_produtos (
     id_categoria INT NOT NULL,
     FOREIGN KEY (id_categoria) REFERENCES tb_categorias(id)
 );
-
+```
 ### Tabela de Vendas
-
+```sql
 CREATE TABLE tb_vendas (
     id SERIAL PRIMARY KEY,
     id_funcionario INT NOT NULL,
@@ -123,9 +123,9 @@ CREATE TABLE tb_vendas (
     FOREIGN KEY (id_funcionario) REFERENCES tb_funcionarios(id)
 );
 
-
+```
 ### Tabela de Itens de Venda
-
+```sql
 CREATE TABLE tb_itens_vendas (
     id SERIAL PRIMARY KEY,
     id_venda INT NOT NULL,
@@ -136,7 +136,7 @@ CREATE TABLE tb_itens_vendas (
     FOREIGN KEY (id_produto) REFERENCES tb_produtos(id)
 );
 
-
+```
 ## Tecnologias Utilizadas
 
 - Java  

@@ -78,14 +78,14 @@ O banco de dados foi projetado com:
 A seguir está o script SQL utilizado para a criação das tabelas do banco de dados do sistema.
 
 ### Tabela de Funcionários
-
+```sql
 CREATE TABLE tb_funcionarios (
     id SERIAL PRIMARY KEY,
     nome VARCHAR(120) NOT NULL,
     email VARCHAR(100) NOT NULL,
     senha VARCHAR(32) NOT NULL
 );
-
+```
 ### Tabela de Administrador
 
 CREATE TABLE tb_admin (
